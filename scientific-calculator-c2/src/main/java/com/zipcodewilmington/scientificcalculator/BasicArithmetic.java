@@ -2,7 +2,7 @@ package com.zipcodewilmington.scientificcalculator;
 
 public class BasicArithmetic {
 
-    public static Double addition(Double num1, Double num2) {
+    public static double addition(Double num1, Double num2) {
         return num1 + num2;
     }
 
@@ -12,33 +12,33 @@ public class BasicArithmetic {
         Console.println(String.valueOf(BasicArithmetic.addition(plus1, plus2)));
     }
 
-    public static Integer subtraction(Integer sub1, Integer sub2) {
+    public static Double subtraction(Double sub1, Double sub2) {
         return sub1 - sub2;
     }
 
     public static void getSubtractionInputs() {
-        Integer sub1 = Console.getIntegerInput("enter the number you would like to subtract from");
-        Integer sub2 = Console.getIntegerInput("enter the number you would like to subtract");
+        Double sub1 = Console.getDoubleInput("enter the number you would like to subtract from");
+        Double sub2 = Console.getDoubleInput("enter the number you would like to subtract");
         Console.println(String.valueOf(BasicArithmetic.subtraction(sub1, sub2)));
     }
 
-    public static Integer multiplication(Integer mult1, Integer mult2) {
+    public static Double multiplication(Double mult1, Double mult2) {
         return mult1 * mult2;
     }
 
     public static void getMultiplicationInputs() {
-        Integer mult1 = Console.getIntegerInput("enter the first number you would like to multiply");
-        Integer mult2 = Console.getIntegerInput("enter the second number you would like to multiply");
+        Double mult1 = Console.getDoubleInput("enter the first number you would like to multiply");
+        Double mult2 = Console.getDoubleInput("enter the second number you would like to multiply");
         Console.println(String.valueOf(BasicArithmetic.multiplication(mult1, mult2)));
     }
 
-    public static Integer division(Integer numerator, Integer denominator) {
+    public static Double division(Double numerator, Double denominator) {
         return numerator / denominator;
     }
 
     public static void getDivisionInputs() {
-        Integer numerator = Console.getIntegerInput("enter the numerator");
-        Integer denominator = Console.getIntegerInput("enter the denominator");
+        Double numerator = Console.getDoubleInput("enter the numerator");
+        Double denominator = Console.getDoubleInput("enter the denominator");
         Console.println(String.valueOf(BasicArithmetic.division(numerator, denominator)));
     }
 }

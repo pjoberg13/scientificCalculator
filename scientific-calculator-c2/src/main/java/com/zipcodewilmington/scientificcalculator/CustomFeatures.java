@@ -9,7 +9,7 @@ public class CustomFeatures {
         double year2 = 9;
         double year3 = 5;
 
-        try {
+        // try {
             if (dogAge <= 1 && dogAge > 0) {
                 return year1;
             } else if (dogAge > 1 && dogAge <= 2) {
@@ -17,9 +17,9 @@ public class CustomFeatures {
             } else {
                 return year1 + year2 + (year3 * (dogAge - 2));
             }
-        } catch (Exception e) {
-            Console.println("Err");
-        }
+//        } catch (Exception e) {
+//            Console.println("Err");
+//        }
     }
 
     public static void getDogToHumanAgeInput() {
@@ -31,7 +31,7 @@ public class CustomFeatures {
         double year1 = 25;
         double year2 = 4;
 
-        try {
+        // try {
             if (catAge <= 1 && catAge > 0) {
                 return year1;
             } else if (catAge > 1 && catAge <= 2) {
@@ -39,9 +39,9 @@ public class CustomFeatures {
             } else {
                 return year1 * 2 + (year2 * (catAge - 2));
             }
-        } catch (Exception e) {
-            Console.println("Err");
-        }
+//        } catch (Exception e) {
+//            Console.println("Err");
+//        }
     }
 
     public static void getCatToHumanAgeInput() {

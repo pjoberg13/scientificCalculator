@@ -1,6 +1,7 @@
 package com.zipcodewilmington.scientificcalculator;
 
 import java.util.Scanner;
+// import org.jline.*;
 
 /**
  * Created by leon on 2/9/18.
@@ -42,4 +43,5 @@ public class Console {
         Double userInput = Double.valueOf(scanner.nextLine());
         return userInput;
     }
+
 }
