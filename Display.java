@@ -43,17 +43,9 @@ public class Display {
 
     public static void hexadecimal() {
         Scanner user_input =new Scanner(System.in);
-        int decimal, remainder;
         System.out.print("Enter a value: ");
-        char[] hexa = {'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'};
-        String hexaValue = "";
-
-        while(decimal > 0){
-            remainder= decimal%16;
-            hexaValue = hexa[remainder] + hexaValue;
-            decimal = decimal/16;
-
-        }
-        System.out.print("Hexa value = "+);
+        int num = user_input.nextInt();
+        String hexadecimalString = Integer.toHexString(num);
+        System.out.println("Hexadecimal value = "+ hexadecimalString);
     }
 }
