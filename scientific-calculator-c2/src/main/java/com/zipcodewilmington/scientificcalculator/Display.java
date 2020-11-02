@@ -1,6 +1,6 @@
 package com.zipcodewilmington.scientificcalculator;
 import java.util.Scanner;
-
+import java.lang.String;
 public class Display {
 
     public static void main(String[] args){
@@ -23,6 +23,16 @@ public class Display {
         }else if (in.equals("octal")){
             sci.displayMode = "octal;";
         }
+
+        String decimal = userInput;
+        String binary;
+        binary = Integer.toBinaryString(Integer.parseInt(decimal));
+
+        String octal;
+        octal = Integer.toOctalString(Integer.parseInt(decimal));
+
+        String hexadecimal;
+        hexadecimal = Integer.toOctalString(Integer.parseInt(decimal));
 
         //Output
         System.out.println();
