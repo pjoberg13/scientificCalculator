@@ -2,30 +2,58 @@ package com.zipcodewilmington.scientificcalculator;
 import java.util.Scanner;
 
 public class Display {
+    private static Double memory;
+    public static  Double numOnScreen = 0.0;
+    public static Boolean ifMemory = false;
 
-    public static void main(String[] args){
-        ScientificFunctions sci = new ScientificFunctions();
-        sci.displayMode = "decimal";
-        sci.unitsMode = "degrees";
-        Scanner in = new Scanner(System.in);
+    //MEMORY
 
-        System.out.println("Choose between binary, decimal, hexadecimal, and octal");
+    //method to add to memory and update screen
 
-        //User input
-        String userInput = in.nextLine();
+    public static Double addMemory(Double numOnScreen) {
 
-        if (in.equals("binary")){
-            sci.displayMode = "binary";
-        }else if (in.equals("decimal")) {
-            sci.displayMode = "decimal";
-        }else if (in.equals("hexadecimal")) {
-            sci.displayMode = "hexadecimal";
-        }else if (in.equals("octal")){
-            sci.displayMode = "octal;";
+        if(ifMemory == false) {      //if memory is empty, store in memory and update display
+            memory = numOnScreen;
+            ifMemory = true;
+            return numOnScreen;
+        } else Console.println("Memory full. Please clear memory first.");
+        return numOnScreen;
+    }
+
+   public static void getAddMemoryInput(){
+        Double numOnScreen = Double.parseDouble(Console.getStringInput("enter value"));
+        Console.println(String.valueOf(Display.addMemory(numOnScreen)));
         }
 
-        //Output
-        System.out.println();
+
+
+    //method to reset memory
+
+    public static Double resetMemory() {
+        if(ifMemory == true) {       //if memory is full, clear memory
+            memory = 0.0;
+            memory = numOnScreen;
+            return numOnScreen;
+        } else Console.println("Memory is clear");
+        return numOnScreen;
+    }
+
+    public static void getResetMemoryInput(){
+        Double numOnScreen = Double.parseDouble(String.valueOf(Display.resetMemory()));
+        Console.println(String.valueOf((Display.resetMemory())));
+    }
+
+
+    //method to recall memory and display on the screen
+
+    public static Double recallMemory() {
+        memory = numOnScreen;
+        return numOnScreen;
+    }
+
+    public static void getRecallMemoryInput(){
+        Double numOnScreen = Double.parseDouble(String.valueOf(Display.recallMemory()));
+        Console.println(String.valueOf(Display.recallMemory()));
     }
 
 }

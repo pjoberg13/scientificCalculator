@@ -16,7 +16,7 @@ public class MainApplication {
 
         String quitOrNo = "";
         do {
-            Integer i = Console.getIntegerInput("basic arithmetic/functions: 1\nscientific operations: 2\ncustom features: 3");
+            Integer i = Console.getIntegerInput("basic arithmetic/functions: 1\nscientific operations: 2\ncustom features: 3\nmemory: 4");
             switch (i) {
                 case 1:
                 Integer j = Console.getIntegerInput("addition: 1\nsubtraction: 2\nmultiplication: 3\ndivision: 4\n" +
@@ -133,18 +133,36 @@ public class MainApplication {
 
                 switch (customFeatureMenu) {
                     case 1:
-                        getDogToHumanAgeInput();
+                        CustomFeatures.getDogToHumanAgeInput();
                         break;
                     case 2:
-                        getCatToHumanAgeInput();
+                        CustomFeatures.getCatToHumanAgeInput();
+                        break;
+                    default:
+                        Console.println("invalid command please try again.");
+                }
+                break;
+                case 4:
+                    Console.println("Would you like to add a value to memory, reset memory, or recall the value from memory?");
+                    String memoryMenu = String.valueOf((Console.getStringInput("add a value to memory: M\nreset memory: MC\nrecall memory: RCM")));
+
+                switch (memoryMenu) {
+                    case "M":
+
+                        Display.getAddMemoryInput();
+                        break;
+                    case "MC":
+                        Display.getResetMemoryInput();
+                        break;
+                    case "RCM":
+                        Display.getRecallMemoryInput();
                         break;
                     default:
                         Console.println("invalid command please try again.");
                 }
                 break;
                 default:
-                Console.println("Invalid command, try that again");
-                break;
+                    Console.println("Invalid command, try that again");
             }
 
 
